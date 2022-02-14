@@ -37,6 +37,16 @@ radio.onReceivedString(function (receivedString) {
             . # # # .
             . . . . .
             `)
+        if (receivedString == 1) {
+            basic.showIcon(IconNames.No)
+            radio.sendNumber(6)
+        } else if (receivedString == 1) {
+            basic.showIcon(IconNames.Happy)
+            radio.sendNumber(5)
+        } else {
+            basic.showIcon(IconNames.Asleep)
+            radio.sendNumber(5)
+        }
     } else if (jugar_2 == 2) {
         basic.showLeds(`
             # # # # #
@@ -45,7 +55,17 @@ radio.onReceivedString(function (receivedString) {
             # # # # #
             # # # # #
             `)
-    } else {
+        if (receivedString == 2) {
+            basic.showIcon(IconNames.No)
+            radio.sendNumber(6)
+        } else if (receivedString == 2) {
+            basic.showIcon(IconNames.Happy)
+            radio.sendNumber(5)
+        } else {
+            basic.showIcon(IconNames.Asleep)
+            radio.sendNumber(5)
+        }
+    } else if (jugar_2 == 3) {
         basic.showLeds(`
             # # . # #
             # # . # #
@@ -53,6 +73,22 @@ radio.onReceivedString(function (receivedString) {
             . # . # .
             # . . . #
             `)
+        if (receivedString == 1) {
+            basic.showIcon(IconNames.No)
+            radio.sendNumber(6)
+        } else if (receivedString == 2) {
+            basic.showIcon(IconNames.Happy)
+            radio.sendNumber(5)
+        } else {
+            basic.showIcon(IconNames.Asleep)
+            radio.sendNumber(5)
+        }
+    } else if (receivedString == 4) {
+        basic.showIcon(IconNames.Happy)
+    } else if (receivedString == 5) {
+        basic.showIcon(IconNames.Asleep)
+    } else {
+        basic.showIcon(IconNames.No)
     }
 })
 let jugar_2 = 0
